@@ -1,5 +1,7 @@
 package models;
 
+import botPlayingStrategy.BotPlayingStrategy;
+import botPlayingStrategy.BotPlayingStrategyFactory;
 import models.Enums.BotDifficultyLevel;
 import models.Enums.CellState;
 import models.Enums.PlayerType;

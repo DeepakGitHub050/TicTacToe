@@ -5,6 +5,10 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import Exceptions.DuplicateSymbolException;
+import Exceptions.MoreThanOneBotException;
+import Exceptions.PlayersCountMismatchException;
+import WinningStrategies.WinningStrategy;
 import models.Enums.CellState;
 import models.Enums.GameState;
 import models.Enums.PlayerType;
@@ -105,9 +109,9 @@ public class Game {
         private Builder(){
             this.players = new ArrayList<>();
             this.winningStrategies = new ArrayList<>();
-            this.dimensions=0;
+            this.dimension=0;
         }
-        public Game build() throws MoreThanOneBotException, DuplicateSymbolException, PlayersCountMismatchException{
+        public Game build() throws MoreThanOneBotException, DuplicateSymbolException, PlayersCountMismatchException {
             validateBotCount();
             validateUniqueSymbolForPlayers();
             validateDimentionsAndPlayerCount();
